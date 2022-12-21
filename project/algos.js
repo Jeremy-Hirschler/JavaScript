@@ -97,5 +97,11 @@ function pow(n){
     return false
 }
 
-console.log(pow(125))
-console.log(pow(72))
+// console.log(pow(125))
+// console.log(pow(72))
+
+let arr = ['a','d','c','b']
+// console.log(arr.sort((a,b)=> {
+//     return b > a
+// }))
+console.log(arr.sort())
