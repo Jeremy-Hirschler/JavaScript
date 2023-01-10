@@ -98,7 +98,7 @@ function pow(n){
 }
 
 // console.log(pow(125))
-// console.log(pow(72))
+
 
 let arr = ['a','d','c','b']
 // console.log(arr.sort((a,b)=> {
