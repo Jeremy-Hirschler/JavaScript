@@ -25,22 +25,22 @@ const RowOne = () => {
 
 
     return (
-        <div className='container'>
-            <div className='d-flex justify-content-md-between'>
+        <div className='mx-5'>
+            <div className='d-flex justify-content-md-between marl'>
             {
                 left.map(item => {
-                    return <div key={item.A} className='border border-dark element'>
-                                <h4>{item.Number}</h4>
-                                <h4>{item.Name}</h4>
+                    return <div key={item.A} className='border border-dark element marr'>
+                                <h5>{item.Number}</h5>
+                                <h5>{item.Name}</h5>
                             </div>
                 })
             }
 
             {
                 right.map(item => {
-                    return <div key={item.A} className='border border-dark element'>
-                                <h4>{item.Number}</h4>
-                                <h4>{item.Name}</h4>
+                    return <div key={item.A} className='border border-dark element marl'>
+                                <h5>{item.Number}</h5>
+                                <h5>{item.Name}</h5>
                             </div>
                 })
             }

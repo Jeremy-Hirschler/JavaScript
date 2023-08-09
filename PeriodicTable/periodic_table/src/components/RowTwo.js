@@ -57,27 +57,27 @@ const RowTwo = () => {
 
     // what to display
     return (
-        <div className='container'>
+        <div className='mx-5'>
             <div className='d-flex justify-content-md-between'>
             {/* flex the left and right sides of table */}
-                <div className='left d-flex'>
+                <div className='left d-flex mt-1 marl'>
                     {
                         left.map(item => {
-                            return <div key={item.A} className='border border-dark element'>
+                            return <div key={item.A} className='border border-dark element marr'>
                                         
-                                            <h4>{item.Number}</h4>
-                                            <h4>{item.Name}</h4>
+                                            <h5>{item.Number}</h5>
+                                            <h5>{item.Name}</h5>
                                         
                                     </div>
                         })
                     }
                 </div>
-                <div className='right d-flex'>
+                <div className='right d-flex mt-1'>
                     {
                         right.map(item => {
-                            return <div key={item.A} className='border border-dark element'>
-                                        <h4>{item.Number}</h4>
-                                        <h4>{item.Name}</h4>
+                            return <div key={item.A} className='border border-dark element marl'>
+                                        <h5>{item.Number}</h5>
+                                        <h5>{item.Name}</h5>
                                     </div>
                         })
                     }

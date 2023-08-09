@@ -2,57 +2,86 @@ import React from 'react'
 
 const RowThree = () => {
     const elementsThree = 
-    {
-        Sodium: {
+    [
+        {   A: 'Sodium',
             Number: 11,
             Name: 'Na',
+            Side: 'Left'
         },
 
-        Magnesium: {
+        {   A: 'Magnesium',
             Number: 12,
-            Name: 'Mg'
+            Name: 'Mg',
+            Side: 'Left'
         },
-        Aluminum: {
+        {   A: 'Aluminum',
             Number: 13,
-            Name: 'Al'
+            Name: 'Al',
+            Side: 'Right'
         },
-        Silicon: {
+        {   A: 'Silicon',
             Number: 14,
-            Name: 'Si'
+            Name: 'Si',
+            Side: 'Right'
         },
-        Phosphorus: {
+        {   A: 'Phosphorus',
             Number: 15,
-            Name: 'P'
+            Name: 'P',
+            Side: 'Right'
         },
-        Sulfur: {
+        {   A: 'Sulfur',
             Number: 16,
-            Name: 'S'
+            Name: 'S',
+            Side: 'Right'
         },
-        Chlorine: {
+        {   A: 'Chlorine',
             Number: 17,
-            Name: 'Cl'
+            Name: 'Cl',
+            Side: 'Right'
         },
-        Argon: {
+        {   A: 'Argon',
             Number: 18,
-            Name: 'Ar'
+            Name: 'Ar',
+            Side: 'Right'
         },
-    }
+    ];
+
+    // separate elements based on position in table
+    const left = elementsThree.filter(element => {
+        return element.Side == 'Left'
+    });
+    const right = elementsThree.filter(element => {
+        return element.Side == 'Right'
+    });
 
 
     return (
-        <div className='container border border-danger'>
-            <div className='row justify-content-md-between'>
-
-            {
-                Object.entries(elementsThree).map(item => {
-                    return <div key={item} className={`${item[0]} element`}>
-                    
-                        <h4>{item[1].Number}</h4>
-                        <h4>{item[1].Name}</h4>
-                    </div>
-                    // console.log({item})
-                })
-            }
+        <div className='mx-5'>
+            <div className='d-flex justify-content-md-between'>
+            {/* flex the left and right sides of table */}
+                <div className='left d-flex mt-1 marl'>
+                    {
+                        left.map(item => {
+                            return <div key={item.A} className='border border-dark element marr'>
+                                        
+                                            <h5>{item.Number}</h5>
+                                            <h5>{item.Name}</h5>
+                                        
+                                    </div>
+                        })
+                    }
+                </div>
+                <div className='right d-flex mt-1'>
+                    {
+                        right.map(item => {
+                            return <div key={item.A} className='border border-dark element marl'>
+                                        <h5>{item.Number}</h5>
+                                        <h5>{item.Name}</h5>
+                                    </div>
+                        })
+                    }
+                </div>
+            
             </div>
         </div>
     )
