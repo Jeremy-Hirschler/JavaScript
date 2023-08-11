@@ -56,6 +56,7 @@ const RowTwo = () => {
     });
 
     // what to display
+    //change A's to names
     return (
         <div className='mx-5'>
             <div className='d-flex justify-content-md-between'>
